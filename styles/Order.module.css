@@ -1,0 +1,41 @@
+.container {
+    padding: 50px;
+    display: flex;
+}
+
+.left{
+    flex: 2;
+}
+.table{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.right{
+    flex: 1;
+}
+.wrapper{
+    width: 90%;
+    min-height: 300px;
+    background-color: #333;
+    padding: 50px;
+    padding-top: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+.totalTextTitle{
+    margin-right: 10px;
+}
+.button{
+    background-color: #fff;
+    height: 30px;
+    color: teal;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: not-allowed;
+}
+
+
+
