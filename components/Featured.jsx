@@ -6,9 +6,9 @@ const Featured = () => {
   const [index, setIndex] = useState(0);
 
   const images = [
-      "/img/pizza3.png", 
-      "/img/pizza2.png", 
-      "/img/dinner2.png"
+      "/img/pizzaMan1.png", 
+      "/img/pizzaMan2.png", 
+      "/img/pizzaMan4.png"
     ];
 
   const handleArrow = (direction) => {

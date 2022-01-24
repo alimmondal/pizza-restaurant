@@ -7,9 +7,7 @@
     justify-content: space-between;
     position: sticky;
     top:0;
-    /* right:0; */
-    /* left:0; */
-    z-index: 10100;
+    z-index: 999;
 }
 
 .item{
@@ -73,7 +71,14 @@
     color: #d1411e;
 }
 
-
+@media screen and(max-width: 480px) {
+    .item:nth-child(2){
+        display: none;
+    }
+    .item:nth-child(1){
+        flex: 3;
+    }
+}
 
 
 
