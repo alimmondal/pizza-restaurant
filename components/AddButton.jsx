@@ -1,10 +1,10 @@
 import styles from '../styles/Add.module.css';
 
-const AddButton = () => {
+const AddButton = ({setClose}) => {
     return (
-        <div className={styles.container}>
-            Add New pizza
-        </div>
+      <div onClick={() => setClose(false)} className={styles.mainAddButton}>
+        Add New Pizza
+      </div>
     );
 };
 
