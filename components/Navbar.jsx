@@ -24,11 +24,22 @@ const Navbar = () => {
               <li className={styles.listItem}>Home</li>
             </a>
           </Link>
-          <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
-          <Image src="/img/logo.png" alt="" width="160" height="69" />
+          <Link href="/shop">
+            <a>
+              <li className={styles.listItem}>Products</li>
+            </a>
+          </Link>
+          <Link href="/admin" passHref>
+            <a>
+              <li className={styles.listItem}>Admin</li>
+            </a>
+          </Link>
+          <Link href="/" passHref>
+            <a>
+              <Image src="/img/logo.png" alt="" width="160" height="69" />
+            </a>
+          </Link>
           <li className={styles.listItem}>Events</li>
-          <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>Contact</li>
         </ul>
       </div>

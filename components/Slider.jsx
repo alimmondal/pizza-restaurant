@@ -1,9 +1,7 @@
-import styles from "../styles/Slider.module.css"
-
 import { React, useEffect, useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ShopNowBtn from "./ShopNowBtn";
-// import { Link } from "react-router-dom";
+import Link from "next/link";
 import pizzaMan1 from '../public/img/pizzaMan1.png'
 import pizzaMan2 from '../public/img/pizzaMan2.png'
 import pizzaMan3 from '../public/img/pizzaMan3.png'
@@ -74,10 +72,6 @@ const Slider = () => {
             <div className="slideContent">
               <h1 className="titleslider">{slide.title}</h1>
               <h3 className="subtitleslider">{slide.subtitle}</h3>
-              {/* <div className="content">
-                {" "}
-                <ShopNowBtn />
-              </div> */}
             </div>
             <div className="imgContainer">
               <Image src={slide.img} layout="fill" alt="" />
@@ -85,7 +79,11 @@ const Slider = () => {
 
             <div className="content">
               {" "}
-              <ShopNowBtn />
+              <Link href="/shop">
+                <a>
+                  <ShopNowBtn />
+                </a>
+              </Link>
             </div>
           </div>
         );
