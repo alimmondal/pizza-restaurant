@@ -1,12 +1,11 @@
-import Image from "next/image";
-import { useState } from "react";
-import styles from "../../styles/Product.module.css";
-import axios from "axios";
-import { addProduct } from "../../redux/cartSlice";
-import { useDispatch } from "react-redux";
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from '../../styles/Product.module.css';
+import axios from 'axios';
+import { addProduct } from '../../redux/cartSlice';
+import { useDispatch } from 'react-redux';
 
 const Product = ({ pizza }) => {
-  
   const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -35,10 +34,10 @@ const Product = ({ pizza }) => {
   };
   // console.log(extras);
 
-  const handleClick = ()=> {
-    dispatch(addProduct({...pizza, extras, price, quantity}))
-    console.log("clicked");
-  }
+  const handleClick = () => {
+    dispatch(addProduct({ ...pizza, extras, price, quantity }));
+    console.log('clicked');
+  };
 
   return (
     <div className={styles.container}>
@@ -50,7 +49,7 @@ const Product = ({ pizza }) => {
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.title}</h1>
         <span className={styles.price}> $ {price} </span>
-        <p className={styles.desc}> ${pizza.desc} </p>
+        <p className={styles.desc}> $ {pizza.desc} </p>
         <h3 className={styles.choose}> Choose the size </h3>
         <div className={styles.sizes}>
           <div className={styles.size} onClick={() => handleSize(0)}>
@@ -83,14 +82,16 @@ const Product = ({ pizza }) => {
         </div>
         <div className={styles.add}>
           <input
-            onChange={(e)=> setQuantity(e.target.value)}
+            onChange={(e) => setQuantity(e.target.value)}
             type="number"
             defaultValue={1}
             className={styles.quantity}
             name=""
             id=""
           />
-          <button onClick={handleClick} className={styles.button}>Add to Cart</button>
+          <button onClick={handleClick} className={styles.button}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
